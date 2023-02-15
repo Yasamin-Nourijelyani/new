@@ -1,2 +1,1 @@
 # Rapid naming
-static webpage
