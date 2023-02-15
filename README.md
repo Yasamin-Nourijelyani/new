@@ -1,1 +1,2 @@
 # Rapid naming
+hello
