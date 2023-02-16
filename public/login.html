@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BalanceAI Discovery - Login</title>
+        <!---load in jQuery library-->
+        <script src="jquery-3.6.3.min.js"></script>
+        <link rel="stylesheet" href="./styles.css">
+
+        <style>
+
+            body {
+                background-image: url("images/login back.gif");
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: 100% 100%;
+            }
+
+            .log{
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                padding: 10px 24px;
+                border-radius: 12px;
+                background-color: rgb(235, 192, 222);
+                border: 2px solid rgb(182, 56, 102);
+                color:rgb(182, 56, 102);
+                margin-right: 5px;
+                margin-left: 5px;        
+            }
+
+            .log:hover {
+                border: 0px;
+                color: white;
+            }
+
+            .credentials {
+                background-color: rgb(234, 244, 252);
+                padding: 20px;  
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                border-radius: 12px;
+                border: 2px solid rgb(81, 161, 218);  
+                color: rgb(81, 161, 218);
+                justify-content: center;          
+                width:fit-content; 
+                float:center;
+                margin:auto;
+            }
+
+
+        </style>
+
+    </head>
+
+    <body>
+        <p style = "text-align: center;">
+            <img class = "logo" src = "images/logo.png">
+        </p>
+        <!--Login Box-->
+        
+        <div class = "credentials" id = "login"> 
+            <h2>Enter Your Login Details!</h2>
+            <h6>Email</h6>
+            <input class = "inputEmail" id="enterEmail" type="text">
+            <h6>Password</h6>
+            <input class = "inputPass" id="enterPass" type="text"> <br><br>
+            <button class = "log" id = "login"> Login </button>
+
+        </div>
+       
+
+
+    </body>
+
+</html>
