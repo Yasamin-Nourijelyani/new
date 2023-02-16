@@ -1,10 +1,11 @@
 import {initializeApp} from "firebase/app";
 import {getFirestore} from 'firebase/firestore';
-
+import {getDatabase} from 'firebase/database';
 
 const firebaseApp = initializeApp({
     apiKey: "AIzaSyAeyuRFehSKfK-fY_Cd_auzCHIq6uVcVEo",
     authDomain: "disoveryapp-6e148.firebaseapp.com",
+    databaseURL: "https://disoveryapp-6e148-default-rtdb.firebaseio.com",
     projectId: "disoveryapp-6e148",
     storageBucket: "disoveryapp-6e148.appspot.com",
     messagingSenderId: "408140914826",
@@ -12,5 +13,6 @@ const firebaseApp = initializeApp({
 });
 
 const db = getFirestore(firebaseApp);
-export {db}
+const database = getDatabase(firebaseApp);
+export{db, database}
 

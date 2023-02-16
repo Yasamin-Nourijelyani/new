@@ -1,128 +1,157 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>
-            BalanceAI Discovery - Rapid Naming
-        </title>
-        <!---load in jQuery library-->
-        <script src="jquery-3.6.3.min.js"></script>
-    </head>
+<html lang="en">
 
-    <style>
-        /* Set background image */
-        body {
-          background-image: url("images/back.gif");
-          background-repeat: no-repeat;
-          background-attachment: fixed;
-          background-size: 100% 100%;
-        }
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BalanceAI Discovery - Rapid Naming</title>
+    <!---load in jQuery library-->
+    <script src="jquery-3.6.3.min.js"></script>
+    <link rel="stylesheet" href="./styles.css">
+</head>
 
-        /* Aligns timer and buttons to the center */
-        .center {
-            display: flex;
-            justify-content: center;
-        }
-        </style>
+<style>
+    /* Set background image */
+    body {
+      background-image: url("images/back.gif");
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: 100% 100%;
+    }
 
-    <body>
-        <!--Handles timing.--> 
-        <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    /* Aligns timer and buttons to the center */
+    .center {
+        display: flex;
+        justify-content: center;
+    }
+    </style>
 
-        <script> // Copied from https://www.tutscoder.com/post/how-to-create-start-stop-timer-using-jquery (with modifications).
-            $(document).ready(function () {
-                var mins = 0;
-                var seconds = 0;
 
-                $("#startbtn").click(function () {
-                    startTimer();
-                });
+<body>
+    <!--Handles timing.--> 
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 
-                $("#stopbtn").click(function () {
-                    clearTimeout(timex);
-                });
+    <script> // Copied from https://www.tutscoder.com/post/how-to-create-start-stop-timer-using-jquery (with modifications).
+        $(document).ready(function () {
+            var mins = 0;
+            var seconds = 0;
 
-                function startTimer() {
-                    timex = setTimeout(function () {
-                        seconds++;
-                        if (seconds > 59) {
-                            seconds = 0;
-                            mins++;
-
-                            if (mins < 10) {
-                                $("#mins").text("0" + mins + ":");
-
-                            } else $("#mins").text(mins + ":");
-                        }
-                        if (seconds < 10) {
-                            $("#seconds").text("0" + seconds);
-                        } else {
-                            $("#seconds").text(seconds);
-                        }
-                        startTimer();
-                    }, 1000);
-                }
+            $("#startbtn").click(function () {
+                startTimer();
             });
-        // Copied section ends.    
-        </script>         
 
-        <script>
-            // Changes to the next round of pictures when you press "Next"
+            $("#stopbtn").click(function () {
+                clearTimeout(timex);
+            });
 
-            function swapPics() {
-                document.getElementById("pictures").innerHTML = '<img src = "images/fish.png" width = "200" height = "200">' + ' ' +
-                '<img src = "images/frog.png" width = "200" height = "200">' +
-                '<img src = "images/pear.png" width = "200" height = "200">' + ' ' +
-                '<img src = "images/bee.png" width = "200" height = "200">'
+            function startTimer() {
+                timex = setTimeout(function () {
+                    seconds++;
+                    if (seconds > 59) {
+                        seconds = 0;
+                        mins++;
+
+                        if (mins < 10) {
+                            $("#mins").text("0" + mins + ":");
+
+                        } else $("#mins").text(mins + ":");
+                    }
+                    if (seconds < 10) {
+                        $("#seconds").text("0" + seconds);
+                    } else {
+                        $("#seconds").text(seconds);
+                    }
+                    startTimer();
+                }, 1000);
             }
+        });
+    // Copied section ends.    
+    </script>         
 
-            // Changes to the first set of pictures when you press "Back"
+    <script>
+        // Changes to the next round of pictures when you press "Next"
 
-            function swapBack() {
-                document.getElementById("pictures").innerHTML = '<img src = "images/car.png" width = "200" height = "200">' + ' ' +
-                '<img src = "images/cat.png" width = "200" height = "200">' +
-                '<img src = "images/leaf.png" width = "200" height = "200">' + ' ' +
-                '<img src = "images/key.png" width = "200" height = "200">'                
-            }
-        </script>
+        function swapPics() {
+            document.getElementById("pictures").innerHTML = '<img src = "images/fish.png" width = "200" height = "200">' + ' ' +
+            '<img src = "images/frog.png" width = "200" height = "200">' +
+            '<img src = "images/pear.png" width = "200" height = "200">' + ' ' +
+            '<img src = "images/bee.png" width = "200" height = "200">'
+        }
 
-        <!--Display logo in corner-->
-        <img src = "images/logo.png" width = "100">
+        // Changes to the first set of pictures when you press "Back"
 
-        <div id='container'>
-            <!--Displays images-->
-            <p style = "text-align: center;" id = "pictures"> 
-                <img src = "images/car.png" width = "200" height = "200">
-                <img src = "images/cat.png" width = "200" height = "200">
-                <img src = "images/leaf.png" width = "200" height = "200">
-                <img src = "images/key.png" width = "200" height = "200">
-            </p>
+        function swapBack() {
+            document.getElementById("pictures").innerHTML = '<img src = "images/car.png" width = "200" height = "200">' + ' ' +
+            '<img src = "images/cat.png" width = "200" height = "200">' +
+            '<img src = "images/leaf.png" width = "200" height = "200">' + ' ' +
+            '<img src = "images/key.png" width = "200" height = "200">'                
+        }
+    </script>
 
-            <!--Displays Next and Back buttons-->
-            <p style = "text-align: center;">
-                <button onclick = "swapBack()"> Back </button>
-                <button onclick = "swapPics()"> Next </button>
-            </p>
+    <!--Display logo in corner-->
+    <img src = "images/logo.png" width = "100">
 
-            <!--Displays timer-->
-
-            <div id="timer" class="center">
-                <span id="mins">00:</span><span id="seconds">00</span>
-            </div>
-
-
-            <!--Displays Start and Stop buttons-->
-
-            <div id="buttons" class="center">
-                <button id="startbtn">Press to Start</button>
-                <button id="stopbtn">Press to Stop</button>
-            </div>
-
-        </div>
-
-        <!--Displays animal character-->
-        <p style = "text-align: center;"> 
-            <img src="images/character.gif" width = "300" height = "300"/>
+    <div id='container'>
+        <!--Displays images-->
+        <p style = "text-align: center;" id = "pictures"> 
+            <img src = "images/car.png" width = "200" height = "200">
+            <img src = "images/cat.png" width = "200" height = "200">
+            <img src = "images/leaf.png" width = "200" height = "200">
+            <img src = "images/key.png" width = "200" height = "200">
         </p>
 
-    </body>
+        <!--Displays Next and Back buttons-->
+        <p style = "text-align: center;">
+            <button onclick = "swapBack()"> Back </button>
+            <button onclick = "swapPics()"> Next </button>
+        </p>
+
+        <!--Displays timer-->
+
+        <div id="timer" class="center">
+            <span id="mins">00:</span><span id="seconds">00</span>
+        </div>
+
+
+        <!--Displays Start and Stop buttons-->
+
+        <div id="buttons" class="center">
+            <button id="startbtn">Press twice to Start</button>
+            <button id="stopbtn">Press twice to Stop</button>
+        </div>
+
+    </div>
+
+    <!--Displays animal character-->
+    <p style = "text-align: center;"> 
+        <img src="images/character.gif" width = "300" height = "300"/>
+    </p>
+
+    <div class="container">
+        <form action="" id="contactForm">
+            <div class="alert">Your message sent</div>
+
+            <div class="inputBox">
+                <input type="text" id="name" placeholder="Your name...." />
+            </div>
+
+            <div class="inputBox">
+                <input type="email" id="emailid" placeholder="Your Email....." />
+            </div>
+
+            <div class="inputBox">
+                <textarea id="msgContent" cols="30" rows="10" placeholder="Message"></textarea>
+            </div>
+
+            <div class="inputBox">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script src="./mail.js"></script>
+</body>
+
 </html>
