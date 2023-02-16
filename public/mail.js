@@ -1,3 +1,5 @@
+/* code from: https://github.com/Vetrivel-VP/contact_form_firebase/blob/master/index.html  */
+
 const firebaseConfig = {
     apiKey: "AIzaSyAeyuRFehSKfK-fY_Cd_auzCHIq6uVcVEo",
     authDomain: "disoveryapp-6e148.firebaseapp.com",
