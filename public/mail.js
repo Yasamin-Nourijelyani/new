@@ -20,34 +20,55 @@
         import {getDatabase, set, get, update, remove, ref, child} from 'https://www.gstatic.com/firebasejs/9.17.1/firebase-database.js'
 
         const db = getDatabase();
+        var startbtn = document.querySelector('#startbtn');
+        var stopbtn = document.querySelector("#stopbtn");
+        // the ID for the task and student for which we are saving to the database. this value must be unique
+        // Will be implemented to authenticate users in the future
+        var enterID = document.querySelector("#enterID");
 
-        // var enterID = document.querySelector("#enterID");
+        //if the user presses start and stop, the start and stop times will be recorded
+        startbtn.addEventListener('click', saveStartTime);
+        stopbtn.addEventListener('click', saveEndTime);
 
         
-        var stopbtn = document.querySelector("#stopbtn");
-
-        //var seconds = document.querySelector('#seconds');
-
-
-        function InsertData() {
-            set(ref(db, "Tasks/"), {
-                ID: "Hello world",
-                //seconds: seconds.value, //check if this is a string
-                
+        function saveStartTime() {
+            set(ref(db, "Tasks/" + enterID.value), {
+                StartTime: Date.now(),
+                EndTime: Date.now(),
+                                
             })
             .then(()=> {
-                alert("Data added successfuly!")
+                alert("Data added successfuly!");
             })
             .catch((error)=>{
-                alert(error)
+                alert(error);
             });
 
         }
 
+        function saveEndTime() {
+            //enterID will be the task ID later on when we have more tasks
+            update(ref(db, "Tasks/" + enterID.value), {
+                EndTime: Date.now(),
+                
+                //seconds: seconds.value.toString(), //check if this is a string
+                
+            })
+            .then(()=> {
+                alert("Data updated successfuly!");
+            })
+            .catch((error)=>{
+                alert(error);
+            });
+
+        }
+
+
+
+
+
        
-    
-        stopbtn.addEventListener('click', InsertData);
-        
+
 
 
 
