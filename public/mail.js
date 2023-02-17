@@ -21,14 +21,19 @@
 
         const db = getDatabase();
 
-        var enterID = document.querySelector("#enterID");
-   
-        var insertBtn = document.querySelector("#insert");
+        // var enterID = document.querySelector("#enterID");
+
         
+        var stopbtn = document.querySelector("#stopbtn");
+
+        //var seconds = document.querySelector('#seconds');
+
 
         function InsertData() {
-            set(ref(db, "People/" + enterID.value), {
-                ID: enterID.value,
+            set(ref(db, "Tasks/"), {
+                ID: "Hello world",
+                //seconds: seconds.value, //check if this is a string
+                
             })
             .then(()=> {
                 alert("Data added successfuly!")
@@ -39,9 +44,9 @@
 
         }
 
-        
-
-        insertBtn.addEventListener('click', InsertData);
+       
+    
+        stopbtn.addEventListener('click', InsertData);
         
 
 
