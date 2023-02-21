@@ -3,6 +3,8 @@ Checkout our website here:
 
 https://disoveryapp-6e148.firebaseapp.com/
 
+* Our group report is under the Team/ folder
+
 All our dev code is in **public** not in **src**.
 
 -------
