@@ -32,12 +32,12 @@
     /* Button Designs */
     .startStop, .rec {
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        padding: 12px 28px;
+        padding: 1% 2%;
         border-radius: 12px;
         background-color: rgb(171, 212, 213);
         border: 2px solid black;
-        margin-right: 20px;
-        margin-left: 20px;
+        margin-right: 1%;
+        margin-left: 1%;
     }
     .startStop:hover, .backNext:hover, .rec:hover {
         border: 0px;
@@ -46,37 +46,37 @@
 
     .backNext{
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        padding: 10px 24px;
+        padding: 1% 2%;
         border-radius: 12px;
         background-color: rgb(235, 192, 222);
         border: 2px solid rgb(182, 56, 102);
         color:rgb(182, 56, 102);
-        margin-right: 5px;
-        margin-left: 5px;        
+        margin-right: 1%;
+        margin-left: 1%;        
     }
 
     
     .enterTime{
         background-color: rgb(234, 244, 252);
-        padding: 20px;
+        padding: 2%;
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         border-radius: 12px;
         border: 2px solid rgb(81, 161, 218);
-        margin-left: 50px;
-        margin-bottom: 50px;
+        margin-left: 2%;
+        margin-bottom: 2%;
         color:rgb(81, 161, 218);
     }
 
     .clk{
         background-color: rgb(234, 244, 252);
-        padding: 20px;  
+        padding: 1.5%;  
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         border-radius: 12px;
         border: 2px solid rgb(81, 161, 218);  
         color: rgb(81, 161, 218);
-        margin-left: 1px;
-        margin-right: 1px;
-        margin-bottom: 10px;
+        margin-left: 0.2%;
+        margin-right: 0.2%;
+        margin-bottom: 0.5%;
     }
 
     </style>
@@ -127,32 +127,32 @@
         // Changes to the next round of pictures when you press "Next"
 
         function swapPics() {
-            document.getElementById("pictures").innerHTML = '<img src = "images/fish.png" width = "200" height = "200">' + ' ' +
-            '<img src = "images/frog.png" width = "200" height = "200">' +
-            '<img src = "images/pear.png" width = "200" height = "200">' + ' ' +
-            '<img src = "images/bee.png" width = "200" height = "200">'
+            document.getElementById("pictures").innerHTML = '<img src = "images/fish.png" width = "15%" height = "15%">' + ' ' +
+            '<img src = "images/frog.png" width = "15%" height = "15%">' +
+            '<img src = "images/pear.png" width = "15%" height = "15%">' + ' ' +
+            '<img src = "images/bee.png" width = "15%" height = "15%">'
         }
 
         // Changes to the first set of pictures when you press "Back"
 
         function swapBack() {
-            document.getElementById("pictures").innerHTML = '<img src = "images/car.png" width = "200" height = "200">' + ' ' +
-            '<img src = "images/cat.png" width = "200" height = "200">' +
-            '<img src = "images/leaf.png" width = "200" height = "200">' + ' ' +
-            '<img src = "images/key.png" width = "200" height = "200">'                
+            document.getElementById("pictures").innerHTML = '<img src = "images/car.png" width = "15%" height = "15%">' + ' ' +
+            '<img src = "images/cat.png" width = "15%" height = "15%">' +
+            '<img src = "images/leaf.png" width = "15%" height = "15%">' + ' ' +
+            '<img src = "images/key.png" width = "15%" height = "15%">'                
         }
     </script>
 
     <!--Display logo in corner-->
-    <img src = "images/logo.png" width = "100">
+    <img src = "images/logo.png" width = "10%">
 
     <div id='container'>
         <!--Displays images-->
         <p style = "text-align: center;" id = "pictures"> 
-            <img src = "images/car.png" width = "200" height = "200">
-            <img src = "images/cat.png" width = "200" height = "200">
-            <img src = "images/leaf.png" width = "200" height = "200">
-            <img src = "images/key.png" width = "200" height = "200">
+            <img src = "images/car.png" width = "15%" height = "15%">
+            <img src = "images/cat.png" width = "15%" height = "15%">
+            <img src = "images/leaf.png" width = "15%" height = "15%">
+            <img src = "images/key.png" width = "15%" height = "15%">
         </p>
 
         <!--Displays Next and Back buttons-->
@@ -179,7 +179,7 @@
 
     <!--Displays animal character-->
     <p style = "text-align: center;"> 
-        <img src="images/character.gif" width = "300" height = "300"/>
+        <img src="images/character.gif" width = "20%" height = "20%"/>
     </p>
 
     
