@@ -1,7 +1,7 @@
 import unittest
 from bs4 import BeautifulSoup
 
-# code sample from "https://github.com/csc301-2023-winter/assignment-2-10-3-tangjiag-wang1423/blob/main/frontend_with_test/front-end.py"
+# code sample from "https://github.com/csc301-2023-winter/assignment-2-7-2-zhan7393-liivan5/blob/main/spelling/test/test.py"
 class TestHTML(unittest.TestCase):
     # test for whether some certain text is included in html
     def test_html_text(self):
