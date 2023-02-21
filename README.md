@@ -55,6 +55,8 @@ Select
 - (Y) to proceed
 - "Hosting: Configure files for FireBase Hosting and (optionally) set up Github action deploys
 
+When it asks to keep the default folder (public) - input in build.
+
 and then
 ```
 firebase deploy
