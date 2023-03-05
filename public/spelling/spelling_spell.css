@@ -1,0 +1,64 @@
+#animal {
+	max-width: 60%;
+	height: auto;
+}
+#car {
+	height: 20vh;
+	position: absolute;
+	margin-top: 15vh;
+	margin-right: min(200px, 20vw);
+}
+#spelling-area {
+	background-color: #ffefe3;
+	border-radius: 15px;
+}
+#road {
+	border-radius: 15px;
+	position: relative;
+
+	/*max-height: 35vh;*/
+	height: 35vh;
+	width: 100%;
+}
+
+body {
+	background-color: #c3e8f7;
+}
+
+/* Want to avoid having a scrollbar */
+@media only screen and (min-width: 476px) {
+	#animal {
+		max-width: 40%;
+		height: auto;
+	}
+	#car {
+
+		
+	}
+}
+
+/* Same as Bootstrap's md breakpoint */
+@media only screen and (min-width: 768px) {
+	#animal {
+		max-width: 22%;
+		height: auto;
+	}
+	#car {
+
+		
+	}
+}
+
+/* Anmial wiggle animation */
+#animal {
+    animation: wiggle 2s; 
+    animation-iteration-count: infinite; 
+  }
+
+  @keyframes wiggle {
+    0% {transform: scale(1);} 
+    10%, 20% {transform: scale(1) rotate(-1deg);} 
+    30%, 50%, 70%, 90% {transform: scale(1) rotate(1deg);} 
+    40%, 60%, 80% {transform: scale(1) rotate(-1deg);} 
+    100% {transform: scale(1) rotate(0);} 
+ } 

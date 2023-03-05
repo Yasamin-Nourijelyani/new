@@ -1,0 +1,5 @@
+Who is your partner? What’s their name, title, and email?
+- Our partner is professor Eunice Eunhee Jang, PhD and her team from Department of Applied Psychology & Human Development at Ontario Institute for Studies in Education. Their email address is eun.jang@utoronto.ca.
+
+Who is your TA and what’s their email?
+- Our TA is Pritish Mishra and their email is pritish@cs.toronto.edu.

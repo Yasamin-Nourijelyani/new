@@ -1,201 +1,82 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BalanceAI Discovery - Rapid Naming</title>
-    <!---load in jQuery library-->
-    <script src="jquery-3.6.3.min.js"></script>
-    <link rel="stylesheet" href="./styles.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BalanceAI Discovery - Login</title>
+        <!---load in jQuery library-->
+        <script src="jquery-3.6.3.min.js"></script>
+        <link rel="stylesheet" href="./styles.css">
 
-<style>
-    /* Set background image */
-    body {
-      background-image: url("images/back.gif");
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      background-size: 100% 100%;
-    }
+        <style>
 
-    /* Aligns timer and buttons to the center */
-    .center {
-        display: flex;
-        justify-content: center;
-    }
-
-    #enterDetails {float: left; }
-    #findDetails {float: left; }
-
-    /* Button Designs */
-    .startStop, .rec {
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        padding: 1% 2%;
-        border-radius: 12px;
-        background-color: rgb(171, 212, 213);
-        border: 2px solid black;
-        margin-right: 1%;
-        margin-left: 1%;
-    }
-    .startStop:hover, .backNext:hover, .rec:hover {
-        border: 0px;
-        color:white;
-    }
-
-    .backNext{
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        padding: 1% 2%;
-        border-radius: 12px;
-        background-color: rgb(235, 192, 222);
-        border: 2px solid rgb(182, 56, 102);
-        color:rgb(182, 56, 102);
-        margin-right: 1%;
-        margin-left: 1%;        
-    }
-
-    
-    .enterTime{
-        background-color: rgb(234, 244, 252);
-        padding: 2%;
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        border-radius: 12px;
-        border: 2px solid rgb(81, 161, 218);
-        margin-left: 2%;
-        margin-bottom: 2%;
-        color:rgb(81, 161, 218);
-    }
-
-    .clk{
-        background-color: rgb(234, 244, 252);
-        padding: 1.5%;  
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        border-radius: 12px;
-        border: 2px solid rgb(81, 161, 218);  
-        color: rgb(81, 161, 218);
-        margin-left: 0.2%;
-        margin-right: 0.2%;
-        margin-bottom: 0.5%;
-    }
-
-    </style>
-
-
-<body id="task1">
-    <!--Handles timing.--> 
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-
-    <script> // Copied from https://www.educba.com/jquery-timer/ (with modifications)
-        $(document).ready(function () {
-            var mins = 0;
-            var seconds = 0;
-
-            $("#startbtn").click(function () {
-                startTimer();
-            });
-
-            $("#stopbtn").click(function () {
-                clearTimeout(timex);
-            });
-
-            function startTimer() {
-                timex = setTimeout(function () {
-                    seconds++;
-                    if (seconds > 59) {
-                        seconds = 0;
-                        mins++;
-
-                        if (mins < 10) {
-                            $("#mins").text("0" + mins + ":");
-
-                        } else $("#mins").text(mins + ":");
-                    }
-                    if (seconds < 10) {
-                        $("#seconds").text("0" + seconds);
-                    } else {
-                        $("#seconds").text(seconds);
-                    }
-                    startTimer();
-                }, 1000);
+            body {
+                background-image: url("images/login back.gif");
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: 100% 100%;
             }
-        });
-    // Copied section ends.    
-    </script>         
 
-    <script>
-        // Changes to the next round of pictures when you press "Next"
+            .log{
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                padding: 10px 24px;
+                border-radius: 12px;
+                background-color: rgb(235, 192, 222);
+                border: 2px solid rgb(182, 56, 102);
+                color:rgb(182, 56, 102);
+                margin-right: 5px;
+                margin-left: 5px;        
+            }
 
-        function swapPics() {
-            document.getElementById("pictures").innerHTML = '<img src = "images/fish.png" width = "15%" height = "15%">' + ' ' +
-            '<img src = "images/frog.png" width = "15%" height = "15%">' +
-            '<img src = "images/pear.png" width = "15%" height = "15%">' + ' ' +
-            '<img src = "images/bee.png" width = "15%" height = "15%">'
-        }
+            .log:hover {
+                border: 0px;
+                color: white;
+            }
 
-        // Changes to the first set of pictures when you press "Back"
+            .credentials {
+                background-color: rgb(234, 244, 252);
+                padding: 20px;  
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                border-radius: 12px;
+                border: 2px solid rgb(81, 161, 218);  
+                color: rgb(81, 161, 218);
+                justify-content: center;          
+                width:fit-content; 
+                float:center;
+                margin:auto;
+            }
 
-        function swapBack() {
-            document.getElementById("pictures").innerHTML = '<img src = "images/car.png" width = "15%" height = "15%">' + ' ' +
-            '<img src = "images/cat.png" width = "15%" height = "15%">' +
-            '<img src = "images/leaf.png" width = "15%" height = "15%">' + ' ' +
-            '<img src = "images/key.png" width = "15%" height = "15%">'                
-        }
-    </script>
 
-    <!--Display logo in corner-->
-    <img src = "images/logo.png" width = "10%">
+        </style>
 
-    <div id='container'>
-        <!--Displays images-->
-        <p style = "text-align: center;" id = "pictures"> 
-            <img src = "images/car.png" width = "15%" height = "15%">
-            <img src = "images/cat.png" width = "15%" height = "15%">
-            <img src = "images/leaf.png" width = "15%" height = "15%">
-            <img src = "images/key.png" width = "15%" height = "15%">
-        </p>
+    </head>
 
-        <!--Displays Next and Back buttons-->
+    <body>
         <p style = "text-align: center;">
-            <button class = "backNext" onclick = "swapBack()"> Back </button>
-            <button class = "backNext" onclick = "swapPics()"> Next </button>
+            <img class = "logo" src = "images/logo.png">
         </p>
+        <!--Login Box-->
+        
+        <div class = "credentials" id = "login"> 
+            <h2>Enter Your Login Details!</h2>
+            <h6>Email</h6>
+            <input class = "inputEmail" id="enterEmail" type="text">
+            <h6>Password</h6>
+            <input class = "inputPass" id="enterPass" type="text"> <br><br>
+            <button class = "log" id = "login"> Login </button>
+            <button class = "log" id = "signup"> Sign Up </button>
 
-        <!--Displays timer-->
 
-        <div id="timer" class="center">
-            <span class = "clk" id="mins">00</span><span class = "clk" id="seconds">00</span>
         </div>
 
+        <!-- Database connection -->
+    <script type="module" src="./loginDB.js"></script>
+       
 
-        <!--Displays Start and Stop buttons-->
 
-        <div id="buttons" class="center">
-            <button class = "startStop" id="startbtn">Press to Start</button>
-            <button class = "startStop" id="stopbtn">Press to Stop</button>
-        </div>
-
-    </div>
-
-    <!--Displays animal character-->
-    <p style = "text-align: center;"> 
-        <img src="images/character.gif" width = "20%" height = "20%"/>
-    </p>
-
-    
-
-    <!-- Database connection -->
-    <script type="module" src="./mail.js"></script>
-
-    <div class="enterTime" id="enterDetails">
-        <h1>Enter ID</h1>
-        <h5>Type in your unique ID before beginning</h5>
-        <input id="enterID" type="text"> <br><br>
-
-    </div>
-    
-    
-    
-</body>
+    </body>
 
 </html>

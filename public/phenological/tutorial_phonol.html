@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> Balance AI Discovery - Phonological Awareness </title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="start_styles.css">
+
+        <script src="https://randojs.com/1.0.0.js"></script>
+        <script>
+            function RandomfileNumber(){
+                document.getElementById("myNumber").innerHTML = rando(1, 26);
+            }
+        </script>
+    </head>
+<body>
+
+    <script>
+        function playRandomAudio() {
+            const audioElement = new Audio('audio/Letter_B.mp3'); 
+            audioElement.play(); // play the selected audio
+}
+    </script>
+
+    <div class="wrapper">
+        <div class="one">
+            <img src="img/BalanceAI.png" width="200">
+        <a href="index.html">
+            <button class="back"> Back <i class="back-btn"></i></button>
+          </a>
+        </div>
+        <div class="two" style="margin: 0 auto; width: 900px">
+            <img src="img/Tree.png" width="750">
+            <img class="apple1" src="img/Apple.png" width="140"> 
+            <div class="letter1"> a </div>
+            <img class="apple2" src="img/Apple.png" width="140">
+            <div class="letter2"> b </div>
+            <img class="apple3" src="img/Apple.png" width="140">
+            <div class="letter3"> c </div>
+            <img class="apple4" src="img/Apple.png" width="140">
+            <div class="letter4"> d </div>
+            <img class="apple5" src="img/Apple.png" width="140">
+            <div class="letter5"> e </div>
+        </div>
+        <div class="three" style="margin: 0 auto; width: 450px">
+            <img src="img/panda-start.gif" class="panda-start" width="400">
+            <img src="img/Speaker.png" class="speaker" width="50" onclick= playRandomAudio()>
+
+        </div>
+      </div>
+
+
+</body>
+</html>

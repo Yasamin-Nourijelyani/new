@@ -1,0 +1,100 @@
+body {
+  background-color: #8bcece;
+}
+
+hr {
+  background-color: white;
+  border-style: none;
+  border-top: 4px dotted grey;
+  width: 5%;
+  }
+
+h1 {
+  color: #ffffff;
+}
+
+h3 {
+  color: #66BFBF;
+}
+
+.tut-btn {
+  top: 5%;
+  position: relative;
+  right: 100px;
+}
+body {
+  background-color: #8bcece;
+  
+}
+.start {
+  padding: 15px 25px;
+  margin: 5px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #04AA6D;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+  position: relative;
+}
+
+
+.start:hover {background-color: #3e8e41}
+
+.start:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.tutorial {
+  padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #0457aa;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+  position: relative;
+}
+
+.tutorial:hover {background-color: #709eb9}
+
+.tutorial:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+footer {
+  text-align: center;
+}
+
+
+
+hr {
+  background-color: white;
+  border-style: none;
+  border-top: 4px dotted grey;
+  width: 5%;
+  }
+
+h1 {
+  color: #ffffff;
+}
+
+h3 {
+  color: #66BFBF;
+}
+
+.animals {
+position: relative;
+}
+
+.BAI {
+position: relative;
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Balance AI Discovery - Phonological Awareness </title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="start_styles.css">
+
+        <script src="https://randojs.com/1.0.0.js"></script>
+        <script>
+            function RandomfileNumber(){
+                document.getElementById("myNumber").innerHTML = rando(1, 26);
+            }
+        </script>
+    </head>
+<body>
+
+    <script>
+        function playRandomAudio() {
+            const audioFolder = 'audio/'; // specify the folder where your audio files are stored
+            const files = [];
+            const audioFiles = ['Letter_a.mp3', 'Letter_B.mp3', 'Letter_c.mp3', 'Letter_D.mp3',
+            'Letter_e.mp3', 'Letter_f.mp3', 'Letter_g.mp3', 'Letter_h.mp3', 'Letter_i.mp3', 'Letter_i.mp3', 
+            'Letter_j.mp3', 'Letter_k.mp3', 'Letter_l.mp3', 'Letter_m.mp3', 'Letter_n.mp3', 'Letter_o.mp3', 
+            'Letter_p.mp3', 'Letter_q.mp3', 'Letter_r.mp3', 'Letter_s.mp3', 'Letter_t.mp3', 'Letter_u.mp3', 
+            'Letter_v.mp3', 'Letter_w.mp3', 'Letter_x.mp3', 'Letter_y.mp3', 'Letter_z.mp3']; // specify the names of your audio files
+  
+            const randomIndex = Math.floor(Math.random() * audioFiles.length); // generate a random index to select a random audio file
+            const selectedAudio = audioFolder + audioFiles[randomIndex]; // concatenate the folder and file name to create the audio source
+
+            const audioElement = new Audio(selectedAudio); // create a new Audio object with the selected audio source
+            audioElement.play(); // play the selected audio
+            getLetters(audioFiles[randomIndex]); // get alphabets accordingly
+        }
+    </script>
+    <script>
+        function getLetters(audioFileName) {
+            let letter = audioFileName.charAt(7).toLowerCase(); // get random letter chosen
+
+            const apples = ['l1', 'l2', 'l3', 'l4', 'l5']; // possible apples
+            const appleNum = Math.floor(Math.random() * apples.length);
+            const selectedapple = apples[appleNum]; // chose randome apple
+            const fieldNameElement = document.getElementById(selectedapple);
+            fieldNameElement.textContent = letter; // replace text for random apple
+
+            const allLetters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j',
+                                'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't',
+                                'u', 'v', 'w', 'x', 'y', 'z'];
+            const letterIndex = allLetters.indexOf(letter);
+            if (letterIndex > -1) { 
+                allLetters.splice(letterIndex, 1); 
+            }
+            const appleIndex = apples.indexOf(selectedapple);
+            if (appleIndex > -1) { 
+                apples.splice(appleIndex, 1); 
+            }
+
+            while (apples.length > 0) {
+                const appleNum1 = Math.floor(Math.random() * apples.length);
+                const selectedapple1 = apples[appleNum1]; // chose randome apple
+                const fieldNameElement1 = document.getElementById(selectedapple1);
+                const letterNum = Math.floor(Math.random() * allLetters.length);
+                const selectedLetter = allLetters[letterNum];
+                fieldNameElement1.textContent = selectedLetter;
+
+                const letterIndex1 = allLetters.indexOf(selectedLetter);
+                if (letterIndex1 > -1) { 
+                allLetters.splice(letterIndex1, 1); 
+
+                const appleIndex1 = apples.indexOf(selectedapple1);
+                if (appleIndex1 > -1) { 
+                apples.splice(appleIndex1, 1); 
+            }
+            }
+            }
+
+        }
+    </script>
+
+    <div class="wrapper">
+        <div class="one">
+            <img src="img/BalanceAI.png" width="200">
+        <a href="index.html">
+            <button class="back"> Back <i class="back-btn"></i></button>
+          </a>
+        </div>
+        <div class="two" style="margin: 0 auto; width: 900px">
+            <img src="img/Tree.png" width="750">
+            <img class="apple1" src="img/Apple.png" width="140"> 
+            <div id="l1"class="letter1"> a </div>
+            <img class="apple2" src="img/Apple.png" width="140">
+            <div id="l2" class="letter2"> b </div>
+            <img class="apple3" src="img/Apple.png" width="140">
+            <div id="l3" class="letter3"> c </div>
+            <img class="apple4" src="img/Apple.png" width="140">
+            <div id="l4" class="letter4"> d </div>
+            <img class="apple5" src="img/Apple.png" width="140">
+            <div id="l5" class="letter5"> e </div>
+        </div>
+        <div class="three" style="margin: 0 auto; width: 450px">
+            <img src="img/panda-start.gif" class="panda-start" width="400">
+            <img src="img/Speaker.png" class="speaker" width="50" onclick= playRandomAudio()>
+
+        </div>
+      </div>
+
+
+</body>

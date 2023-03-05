@@ -1,65 +1,36 @@
-# Rapid naming
-Checkout our website here:
+# Balance AI iOS by The Digital Dream Team
 
-https://disoveryapp-6e148.firebaseapp.com/
+## About the project
+A software tool to interactively test the basic literacy of kindergarten students in the 7 tasks including Oral interaction, Listening, Rapid naming, Spelling, Phonological awareness, Rhyming, and Storytelling.
 
-* Our group report is under the Team/ folder
+## Tasks
+### Where and how are tasks managed
+All code and tasks are managed on Github. Here are some quick links:
+- Deliverable 1: https://github.com/csc301-2023-winter/7-OISE-T/tree/main/deliverable-1
 
-All our dev code is in **public** not in **src**.
+## Setup
+### How to access and use the system
+The web product can be accessed at https://discovery.balanceai.ca/
 
--------
+### Key development requirements
+- Three assessments for kindergarten children:
+  - Rapid naming 
+  - Spelling 
+  - Phonological Awareness 
 
-## Development Process
+- engaging and fun for young kids
+- detailed handbook to demo how to do the assessments
 
-First clone the repository, then download all project dependencies by running:
 
-```
-npm install
-```
+## Stack
+### Frontend
+- React 
 
-Make the changes you need to the code and then use
-```
-npm run start
-```
+### Backend 
+- Google Firebase
 
-to view new changes locally when developing.
+### External Dependencies
+- None
 
------- 
-## Deployment Process
-
-Assuming you cloned the repository already and already have firebase CLI, you need to run
-
-```
-npm build
-```
-
-We host our application on firebase so then just do:
-```
-firebase deploy
-```
-
-If firebase problems when deploying or want to host on your own firebase project then
-
-**DELETE:** 
-
-- ./firebase
-- firebase.json
-- .firebaserc
-
-and then do
-
-```
-firebase init
-```
-
-Select
-
-- (Y) to proceed
-- "Hosting: Configure files for FireBase Hosting and (optionally) set up Github action deploys
-
-When it asks to keep the default folder (public) - input in build.
-
-and then
-```
-firebase deploy
-```
+### Third-party software
+- MangoDB
